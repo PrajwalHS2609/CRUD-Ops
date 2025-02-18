@@ -1,0 +1,10 @@
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-header {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
