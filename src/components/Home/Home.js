@@ -17,14 +17,22 @@ export default function Home() {
       })
       .catch((err) => console.log(err));
   };
-
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    alert("Logged out successfully");
+    window.location.reload();
+  };
   return (
-   <div className="container">
-  <div className="card">
-    <h1 className="title">Welcome to Our Home Page</h1>
-    {/* <p class="subtitle">This is a responsive design with light and dark mode support.</p> */}
-  </div>
-  <h1>Logged in User :{userName}</h1>
-</div>
+    <div className="container">
+      <div className="card">
+        <h1 className="title">Welcome to Our Home Page</h1>
+        {/* <p class="subtitle">This is a responsive design with light and dark mode support.</p> */}
+      </div>
+      <h1>Logged in User :{userName}</h1>
+      <br />
+      <button className="logout-btn" onClick={handleLogout}>
+        Logout
+      </button>
+    </div>
   );
 }

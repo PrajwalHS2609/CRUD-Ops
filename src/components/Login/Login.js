@@ -26,6 +26,7 @@ export default function Login() {
           alert("Invalid username or password.");
         } else {
           console.log(res);
+          localStorage.setItem("user", JSON.stringify(res.data));
           navigate("/");
         }
       })
@@ -79,8 +80,8 @@ export default function Login() {
         </form>
         <p className="signup-prompt">
           Don't have an account?{" "}
-          <a href="/signup" className="signup-link">
-            Sign up
+          <a href="/register" className="signup-link">
+            Register
           </a>
         </p>
       </div>
